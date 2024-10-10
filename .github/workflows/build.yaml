@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: debug
-      run: echo ${{ github.ref_name }}
+      run: echo ${{ github.ref_name }} ${{ github.ref }} ${{ github.head_ref }}
     - name: Create release
       env:
         GITHUB_TOKEN: ${{ github.token }}
